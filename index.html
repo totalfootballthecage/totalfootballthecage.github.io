@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Total Football: The Cage</title>
+<meta name="theme-color" content="#0b0b0b">
+<meta name="description" content="Indoor 3v3 cage football, futsal and a coaching academy. Coming to Nottingham. Register for first access.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Barlow:wght@400;500;600&display=swap">
+<style>
+  /* Layout: one black column, edge to edge. Lockup hero, four-cell offer strip, sign-up block, footer.
+     Atmosphere from a chain-link mesh behind the hero and the tiled TF monogram behind the sign-up.
+     Single committed dark look: this brand lives on black. */
+  :root{
+    --ink:#0b0b0b;
+    --ink-2:#121212;
+    --ink-3:#1a1a1a;
+    --green:#00a651;
+    --green-deep:#008a43;
+    --green-glow:rgba(0,166,81,.16);
+    --chalk:#f4f4f1;
+    --mist:rgba(244,244,241,.64);
+    --dim:rgba(244,244,241,.42);
+    --rule:rgba(244,244,241,.14);
+    --mesh:rgba(0,166,81,.22);
+    --display:"Big Shoulders Display","Barlow Condensed",Impact,"Arial Narrow",sans-serif;
+    --body:"Barlow","Helvetica Neue",Arial,sans-serif;
+    --gutter:clamp(16px,5vw,48px);
+    color-scheme:dark;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  [hidden]{display:none!important}
+  img,svg{max-width:100%}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--chalk);
+    font-family:var(--body);
+    font-size:17px;
+    line-height:1.55;
+    overflow-x:hidden;
+  }
+  a{color:inherit}
+  :focus-visible{outline:2px solid var(--green);outline-offset:3px}
+  .wrap{width:100%;max-width:1120px;margin-inline:auto;padding-inline:var(--gutter)}
+  .eyebrow{
+    font-family:var(--body);font-weight:600;font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--green)
+  }
+  h1,h2,h3{font-family:var(--display);text-transform:uppercase;line-height:.92;margin:0;text-wrap:balance}
+
+  /* Top bar */
+  .top{
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+    padding-block:20px;border-bottom:1px solid var(--rule)
+  }
+  .top .mark{width:40px;height:40px;color:var(--green);flex:none}
+  .pill{
+    display:inline-flex;align-items:center;gap:10px;
+    font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--chalk);
+    border:1px solid var(--rule);padding:8px 14px;white-space:nowrap
+  }
+  .pill i{width:7px;height:7px;background:var(--green);border-radius:50%;display:inline-block;animation:blink 2.4s ease-in-out infinite}
+  @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+  /* Hero */
+  .hero{position:relative;padding-block:clamp(48px,9vw,112px) clamp(56px,9vw,104px);isolation:isolate}
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-2;pointer-events:none;
+    background-image:
+      repeating-linear-gradient(45deg,var(--mesh) 0 1px,transparent 1px 30px),
+      repeating-linear-gradient(-45deg,var(--mesh) 0 1px,transparent 1px 30px);
+    -webkit-mask-image:radial-gradient(70% 80% at 50% 40%,#000 20%,transparent 100%);
+            mask-image:radial-gradient(70% 80% at 50% 40%,#000 20%,transparent 100%);
+    opacity:.75
+  }
+  .hero::after{
+    content:"";position:absolute;inset:auto 0 0 0;height:1px;background:var(--rule);z-index:-1
+  }
+  .lockup{width:min(100%,760px);display:block;margin-inline:auto;filter:drop-shadow(0 0 40px var(--green-glow))}
+  .hero .copy{max-width:640px;margin:clamp(36px,6vw,64px) auto 0;text-align:center;display:grid;gap:18px;justify-items:center}
+  .hero .copy>*{min-width:0;max-width:100%}
+  .hero h1{font-size:clamp(44px,11vw,124px);font-weight:900;letter-spacing:.01em}
+  .hero h1 span{display:block}
+  .hero h1 .g{color:var(--green)}
+  .hero p{margin:0;font-size:clamp(17px,2vw,20px);color:var(--mist);max-width:52ch}
+  .btn{
+    display:inline-flex;align-items:center;gap:12px;
+    font-family:var(--display);font-weight:800;font-size:22px;letter-spacing:.06em;text-transform:uppercase;
+    color:var(--ink);background:var(--green);border:0;padding:14px 26px 12px;cursor:pointer;text-decoration:none;
+    transition:background .15s ease,transform .15s ease
+  }
+  .btn:hover{background:#17c267}
+  .btn:active{transform:translateY(1px)}
+  .btn svg{width:18px;height:18px;flex:none}
+
+  /* Look */
+  .look{padding-block:clamp(28px,5vw,56px);border-bottom:1px solid var(--rule)}
+  .look .grid{display:grid;gap:12px;grid-template-columns:1fr}
+  @media (min-width:700px){.look .grid{grid-template-columns:1fr 1fr}}
+  .look figure{margin:0;min-width:0;display:grid;gap:10px}
+  .look img{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:contain;background:var(--ink-2)}
+  .look figcaption{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
+
+  /* Offer strip */
+  .offer{padding-block:clamp(40px,7vw,80px);border-bottom:1px solid var(--rule)}
+  .offer .grid{
+    display:grid;gap:1px;background:var(--rule);border:1px solid var(--rule);
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr))
+  }
+  .cell{background:var(--ink);padding:26px 22px 28px;display:grid;gap:12px;align-content:start;min-width:0}
+  .cell h3{font-size:30px;font-weight:800;letter-spacing:.02em}
+  .cell p{margin:0;color:var(--mist);font-size:16px}
+  .cell .tag{font-size:12px;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--green)}
+
+  /* Sign-up */
+  .signup{position:relative;padding-block:clamp(56px,9vw,112px);isolation:isolate;overflow:hidden}
+  .signup .pattern{position:absolute;inset:0;z-index:-1;width:100%;height:100%;color:var(--green);opacity:.07;pointer-events:none}
+  .signup .inner{max-width:680px;margin-inline:auto;display:grid;gap:22px}
+  .signup h2{font-size:clamp(48px,9vw,96px);font-weight:900}
+  .signup .lede{margin:0;color:var(--mist);font-size:18px;max-width:56ch}
+  form{display:grid;gap:14px;margin-top:8px}
+  .row{display:grid;gap:14px;grid-template-columns:1fr}
+  @media (min-width:640px){.row{grid-template-columns:1fr 1fr}}
+  .field{display:grid;gap:6px;min-width:0}
+  .field label{font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--dim)}
+  .field input,.field select{
+    width:100%;font:inherit;font-size:17px;color:var(--chalk);background:var(--ink-2);
+    border:1px solid var(--rule);padding:13px 14px;border-radius:0;appearance:none;-webkit-appearance:none
+  }
+  .field select{
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='14' height='9' viewBox='0 0 14 9'><path d='M1 1l6 6 6-6' fill='none' stroke='%2300a651' stroke-width='2'/></svg>");
+    background-repeat:no-repeat;background-position:right 14px center;padding-right:40px
+  }
+  .field input::placeholder{color:var(--dim)}
+  .field input:focus,.field select:focus{border-color:var(--green);outline:none}
+  .actions{display:flex;flex-wrap:wrap;align-items:center;gap:18px;margin-top:6px}
+  .fine{font-size:14px;color:var(--dim);margin:0}
+  .state{display:grid;gap:10px;border:1px solid var(--green);padding:22px 24px;background:var(--green-glow)}
+  .state h3{font-size:34px;font-weight:800;color:var(--green)}
+  .state p{margin:0;color:var(--mist)}
+  .state.err{border-color:#e24b4a;background:rgba(226,75,74,.12)}
+  .state.err h3{color:#f09595}
+  .note{font-size:13px;color:var(--dim)}
+
+  /* Footer */
+  footer{border-top:1px solid var(--rule);padding-block:40px 48px}
+  .foot{display:grid;gap:28px}
+  @media (min-width:760px){.foot{grid-template-columns:1.2fr 1fr 1fr;align-items:start}}
+  .foot h4{font-family:var(--display);font-size:18px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;margin:0 0 10px;color:var(--dim)}
+  .email{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:18px;font-weight:500}
+  .email code{font:inherit;user-select:all;word-break:break-all}
+  .copy-btn{
+    font:inherit;font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--green);background:transparent;border:1px solid var(--rule);padding:6px 10px;cursor:pointer
+  }
+  .copy-btn:hover{border-color:var(--green)}
+  .handles{display:grid;gap:8px;margin:0;padding:0;list-style:none}
+  .handles li{display:flex;gap:12px;align-items:baseline;font-size:16px}
+  .handles .net{font-size:12px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);min-width:74px}
+  .legal{margin-top:36px;padding-top:20px;border-top:1px solid var(--rule);display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;font-size:13px;color:var(--dim)}
+  .legal .mark{width:22px;height:22px;color:var(--green);vertical-align:-5px;margin-right:8px}
+
+  @media (prefers-reduced-motion:reduce){
+    .pill i{animation:none}
+    .btn{transition:none}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <symbol id="tfmark" viewBox="0 0 104.73 104.73">
+      <g fill="currentColor">
+        <path d="M0,0h61.83c-1.07.65-2.08,1.37-3.03,2.18H0V0Z"/>
+        <path d="M0,5.45h55.65c-.55.69-1.06,1.42-1.53,2.18H0v-2.18Z"/>
+        <path d="M0,10.91h52.45c-.3.71-.55,1.44-.77,2.18H0v-2.18Z"/>
+        <path d="M104.73,34.91v2.18h-31.09c-2.32,0-4.53.45-6.55,1.27-.75.31-1.48.66-2.18,1.06-.5.29-.98.6-1.45.94-.64.46-1.25.97-1.82,1.51-.23.21-.45.44-.67.67-.55.57-1.05,1.18-1.51,1.83-.34.47-.65.95-.94,1.44-.4.7-.76,1.43-1.06,2.18-.82,2.02-1.27,4.23-1.27,6.55v50.18h-2.18v-50.18c0-2.3.39-4.5,1.12-6.55.26-.75.57-1.48.92-2.18.04-.09.09-.19.14-.28.55-1.06,1.19-2.06,1.91-2.99.42-.55.88-1.08,1.36-1.58.2-.21.4-.41.6-.6.5-.48,1.03-.93,1.58-1.36.93-.73,1.94-1.37,3-1.92.09-.05.18-.09.27-.14.7-.35,1.43-.66,2.18-.92,2.05-.73,4.25-1.12,6.55-1.12h31.09Z"/>
+        <path d="M104.73,40.36v2.18h-31.09c-2.42,0-4.66.71-6.55,1.95-.6.39-1.17.83-1.69,1.33-.17.16-.34.32-.49.49-.49.52-.94,1.09-1.33,1.69-1.23,1.88-1.95,4.13-1.95,6.55v50.18h-2.18v-50.18c0-2.36.58-4.59,1.6-6.55.18-.34.38-.69.58-1.01.25-.41.53-.79.82-1.17.72-.92,1.54-1.74,2.45-2.45.38-.29.76-.57,1.17-.82.33-.21.66-.4,1.01-.58,1.96-1.03,4.18-1.6,6.55-1.6h31.09Z"/>
+        <path d="M104.73,45.82v2.18h-31.09c-3.61,0-6.55,2.93-6.55,6.55v50.18h-2.18v-50.18c0-2.21.82-4.23,2.18-5.77.24-.28.5-.54.78-.78,1.54-1.36,3.56-2.18,5.77-2.18h31.09Z"/>
+        <path d="M104.73,0v2.18h-31.09c-2.32,0-4.53.45-6.55,1.27-.75.31-1.48.66-2.18,1.06-.5.29-.98.6-1.45.94-.64.46-1.25.97-1.82,1.51-.23.21-.45.44-.67.67-.55.57-1.05,1.18-1.51,1.83-.34.47-.65.95-.94,1.44-.4.7-.76,1.43-1.06,2.18-.82,2.02-1.27,4.23-1.27,6.55v20.08c-.18.21-.36.43-.54.65-.39.49-.75.99-1.1,1.52-.19.28-.37.57-.55.86v-23.11c0-2.3.39-4.5,1.12-6.55.26-.75.57-1.48.92-2.18h.14v-.28c.55-1.06,1.19-2.06,1.91-2.99.42-.55.88-1.08,1.36-1.58.2-.21.4-.41.6-.6.5-.48,1.03-.93,1.58-1.36.93-.73,1.94-1.37,3-1.92.09-.05.18-.09.27-.14.7-.35,1.43-.66,2.18-.92,2.05-.73,4.25-1.12,6.55-1.12h31.09Z"/>
+        <rect x="48.55" y="16.36" width="2.18" height="88.36"/>
+        <rect x="0" y="59.45" width="88.36" height="2.18" transform="translate(104.73 16.36) rotate(90)"/>
+        <rect x="-5.45" y="59.45" width="88.36" height="2.18" transform="translate(99.27 21.82) rotate(90)"/>
+        <path d="M104.73,10.91v2.18h-31.09c-3.61,0-6.55,2.93-6.55,6.55v12.95c-.74.22-1.47.48-2.18.77v-13.72c0-2.21.82-4.23,2.18-5.77.24-.28.5-.54.78-.78,1.54-1.36,3.56-2.18,5.77-2.18h31.09Z"/>
+        <path d="M104.73,5.45v2.18h-31.09c-2.42,0-4.66.71-6.55,1.95-.6.39-1.17.83-1.69,1.33-.17.16-.34.32-.49.49-.49.52-.94,1.09-1.33,1.69-1.23,1.88-1.95,4.13-1.95,6.55v15.39c-.76.47-1.49.97-2.18,1.52v-16.92c0-2.36.58-4.59,1.6-6.55.18-.34.38-.69.58-1.01.25-.41.53-.79.82-1.17.72-.92,1.54-1.74,2.45-2.45.38-.29.76-.57,1.17-.82.33-.21.66-.4,1.01-.58,1.96-1.03,4.18-1.6,6.55-1.6h31.09Z"/>
+      </g>
+    </symbol>
+    <pattern id="tfpattern" patternUnits="userSpaceOnUse" width="150" height="150">
+      <use href="#tfmark" x="20" y="20" width="110" height="110"/>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="wrap">
+  <div class="top">
+    <svg class="mark" aria-label="TF monogram"><use href="#tfmark"/></svg>
+    <span class="pill"><i aria-hidden="true"></i>Nottingham &middot; Coming soon</span>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <svg class="lockup" viewBox="0 0 313.88 96.27" role="img" aria-label="Total Football: The Cage">
+        <g fill="#ffffff">
+          <path d="M116.09,57.02V13.82h-14.37V3.21h39.51v10.61h-14.37v43.2h-10.76Z"/>
+          <path d="M153.6,57.02l-7.76-7.76V10.98l7.76-7.76h23.98l7.76,7.76v38.28l-7.76,7.76h-23.98ZM174.59,15.44l-1.61-1.61h-14.76l-1.61,1.61v29.36l1.61,1.61h14.76l1.61-1.61V15.44Z"/>
+          <path d="M204.34,57.02V13.82h-14.37V3.21h39.51v10.61h-14.37v43.2h-10.76Z"/>
+          <path d="M260.15,57.02v-13.99h-17.99v13.99h-10.76V18.74l15.53-15.53h8.45l15.53,15.53v38.28h-10.76ZM260.15,23.2l-8.99-8.99-8.99,8.99v9.22h17.99v-9.22Z"/>
+          <path d="M280.52,57.02V3.21h10.76v43.2h22.6v10.61h-33.36Z"/>
+          <path d="M72.3,94.57v-35.02h23.21v6.9h-16.21v7.41h11.21v6.4h-11.21v14.31h-7Z"/>
+          <path d="M105.07,94.57l-5.05-5.05v-24.92l5.05-5.05h15.61l5.05,5.05v24.92l-5.05,5.05h-15.61ZM118.73,67.5l-1.05-1.05h-9.61l-1.05,1.05v19.11l1.05,1.05h9.61l1.05-1.05v-19.11Z"/>
+          <path d="M136.8,94.57l-5.05-5.05v-24.92l5.05-5.05h15.61l5.05,5.05v24.92l-5.05,5.05h-15.61ZM150.46,67.5l-1.05-1.05h-9.61l-1.05,1.05v19.11l1.05,1.05h9.61l1.05-1.05v-19.11Z"/>
+          <path d="M169.82,94.57v-28.12h-9.36v-6.9h25.72v6.9h-9.36v28.12h-7.01Z"/>
+          <path d="M189.43,94.57v-35.02h20.66l5.05,5.05v9.91l-2.55,2.55,2.55,2.55v9.9l-5.05,5.05h-20.66ZM208.15,67.5l-1.05-1.05h-10.66v7.41h10.66l1.05-1.05v-5.3ZM208.15,81.31l-1.05-1.05h-10.66v7.41h10.66l1.05-1.05v-5.3Z"/>
+          <path d="M239.87,94.57v-9.11h-11.71v9.11h-7.01v-24.92l10.11-10.11h5.5l10.11,10.11v24.92h-7ZM239.87,72.56l-5.85-5.85-5.85,5.85v6h11.71v-6Z"/>
+          <path d="M253.13,94.57v-35.02h7v28.12h14.71v6.9h-21.71Z"/>
+          <path d="M278.1,94.57v-35.02h7v28.12h14.71v6.9h-21.71Z"/>
+        </g>
+        <path fill="#00a651" d="M63.71,19.82v10.38h32.56v16.99h-29.73c-1.56,0-2.83,1.27-2.83,2.83v46.25h-31.15V16.99H0V0h96.27v16.99h-29.73c-1.56,0-2.83,1.27-2.83,2.83Z"/>
+        <g fill="#010101">
+          <path d="M2.83,2.83h53.5c-.92.56-1.8,1.19-2.62,1.89H2.83v-1.89Z"/>
+          <path d="M2.83,7.55h48.14c-.48.6-.92,1.23-1.32,1.89H2.83v-1.89Z"/>
+          <path d="M2.83,12.27h45.38c-.26.62-.48,1.25-.67,1.89H2.83v-1.89Z"/>
+          <path d="M93.44,33.03v1.89h-26.9c-2,0-3.92.39-5.66,1.1-.65.26-1.28.57-1.89.92-.43.25-.85.52-1.25.81-.55.4-1.08.84-1.58,1.31-.2.18-.39.38-.58.58-.48.49-.91,1.02-1.31,1.58-.29.4-.56.82-.81,1.25-.35.6-.66,1.23-.92,1.89-.71,1.75-1.1,3.66-1.1,5.66v43.42h-1.89v-43.42c0-1.99.34-3.89.97-5.66.23-.65.49-1.28.8-1.89.04-.08.08-.16.12-.24.48-.91,1.03-1.78,1.65-2.59.37-.48.76-.93,1.18-1.37.17-.18.34-.35.52-.52.43-.42.89-.81,1.37-1.17.81-.63,1.68-1.18,2.59-1.66.08-.04.16-.08.24-.12.61-.3,1.24-.57,1.89-.8,1.77-.63,3.68-.97,5.66-.97h26.9Z"/>
+          <path d="M93.44,37.75v1.89h-26.9c-2.09,0-4.04.62-5.66,1.68-.52.34-1.01.72-1.46,1.15-.15.14-.29.28-.43.43-.43.45-.81.94-1.15,1.46-1.07,1.63-1.68,3.57-1.68,5.66v43.42h-1.89v-43.42c0-2.04.5-3.97,1.38-5.66.16-.3.32-.59.51-.88.22-.35.46-.69.71-1.01.62-.79,1.33-1.5,2.12-2.12.32-.25.66-.49,1.01-.71.28-.18.57-.35.88-.5,1.7-.89,3.62-1.39,5.66-1.39h26.9Z"/>
+          <path d="M93.44,42.47v1.89h-26.9c-3.13,0-5.66,2.54-5.66,5.66v43.42h-1.89v-43.42c0-1.91.71-3.66,1.89-4.99.21-.24.43-.46.67-.67,1.33-1.18,3.08-1.89,4.99-1.89h26.9Z"/>
+          <path d="M93.44,2.83v1.89h-26.9c-2,0-3.92.39-5.66,1.1-.65.26-1.28.57-1.89.92-.43.25-.85.52-1.25.81-.55.4-1.08.84-1.58,1.31-.2.18-.39.38-.58.58-.48.49-.91,1.02-1.31,1.58-.29.4-.56.82-.81,1.25-.35.6-.66,1.23-.92,1.89-.71,1.75-1.1,3.66-1.1,5.66v17.37c-.16.18-.31.37-.46.56-.34.42-.65.86-.95,1.31-.16.25-.32.49-.47.74v-19.99c0-1.99.34-3.89.97-5.66.23-.65.49-1.28.8-1.89h.12v-.24c.48-.91,1.03-1.78,1.65-2.59.37-.48.76-.93,1.18-1.37.17-.18.34-.35.52-.52.43-.42.89-.81,1.37-1.17.81-.63,1.68-1.18,2.59-1.66.08-.04.16-.08.24-.12.61-.3,1.24-.57,1.89-.8,1.77-.63,3.68-.97,5.66-.97h26.9Z"/>
+          <rect x="44.83" y="16.99" width="1.89" height="76.45"/>
+          <rect x="2.83" y="54.27" width="76.45" height="1.89" transform="translate(96.27 14.16) rotate(90)"/>
+          <rect x="-1.89" y="54.27" width="76.45" height="1.89" transform="translate(91.55 18.88) rotate(90)"/>
+          <path d="M93.44,12.27v1.89h-26.9c-3.13,0-5.66,2.54-5.66,5.66v11.21c-.64.19-1.27.42-1.89.67v-11.87c0-1.91.71-3.66,1.89-4.99.21-.24.43-.46.67-.67,1.33-1.18,3.08-1.89,4.99-1.89h26.9Z"/>
+          <path d="M93.44,7.55v1.89h-26.9c-2.09,0-4.04.62-5.66,1.68-.52.34-1.01.72-1.46,1.15-.15.14-.29.28-.43.43-.43.45-.81.94-1.15,1.46-1.07,1.63-1.68,3.57-1.68,5.66v13.32c-.66.4-1.29.84-1.89,1.32v-14.64c0-2.04.5-3.97,1.38-5.66.16-.3.32-.59.51-.88.22-.35.46-.69.71-1.01.62-.79,1.33-1.5,2.12-2.12.32-.25.66-.49,1.01-.71.28-.18.57-.35.88-.5,1.7-.89,3.62-1.39,5.66-1.39h26.9Z"/>
+        </g>
+        <g fill="#00a651">
+          <path d="M298.52,82.08h-9.21s0,3.11,0,3.11h-1.15v-7.4h1.15v3.11s9.21,0,9.21,0v1.18Z"/>
+          <path d="M298.52,70.61h-4.6s0,5.03,0,5.03h4.6v1.18h-10.36v-1.18h4.6s0-5.03,0-5.03h-4.6v-1.18h10.36v1.18Z"/>
+          <path d="M298.52,67.49h-10.36v-6.81h1.15v5.62s3.45,0,3.45,0v-4.15h1.16v4.15s3.45,0,3.45,0v-5.62h1.16v6.81Z"/>
+          <path d="M313.52,93.29l-1.5,1.5h-7.37s-1.5-1.5-1.5-1.5v-4.41s1.5-1.5,1.5-1.5h1.26v1.18h-.77s-.83.83-.83.83v3.37s.83.83.83.83h6.39s.83-.83.83-.83v-3.37s-.83-.83-.83-.83h-.77v-1.18h1.26s1.5,1.5,1.5,1.5v4.41Z"/>
+          <path d="M313.52,79.61h-3.15s0,5.03,0,5.03h3.15v1.18h-7.37s-2.99-2.99-2.99-2.99v-1.42s2.99-2.99,2.99-2.99h7.37v1.18ZM306.64,79.61l-2.32,2.32v.39s2.32,2.32,2.32,2.32h2.57s0-5.03,0-5.03h-2.57Z"/>
+          <path d="M313.52,75.15l-1.5,1.5h-7.37s-1.5-1.5-1.5-1.5v-4.41s1.5-1.5,1.5-1.5h1.26v1.18h-.77s-.83.83-.83.83v3.38s.83.83.83.83h6.39s.83-.83.83-.83v-4.2s-3.02,0-3.02,0v1.48h-1.15v-2.66h5.33v5.91Z"/>
+          <path d="M313.52,67.39h-10.36v-6.81h1.15v5.62s3.45,0,3.45,0v-4.15h1.16v4.15s3.45,0,3.45,0v-5.62h1.16v6.81Z"/>
+        </g>
+      </svg>
+
+      <div class="copy">
+        <span class="eyebrow">A new format for modern football</span>
+        <h1><span>Fast.</span><span>Raw.</span><span class="g">Relentless.</span></h1>
+        <p>Indoor 3v3 cage football. No throw-ins, no stoppages, no waiting for the weather. Football without pauses, without space, at its purest. Coming to Nottingham.</p>
+        <a class="btn" href="#signup">Get first access
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="square" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="look" aria-label="The venue and the kit">
+    <div class="wrap">
+      <div class="grid">
+        <figure>
+          <img src="img/venue.jpg" width="1400" height="1400" alt="A green industrial building with the Total Football: The Cage lockup painted across its concrete wall, players walking out of the glass entrance below" loading="lazy">
+          <figcaption>The vision</figcaption>
+        </figure>
+        <figure>
+          <img src="img/cage-tee.jpg" width="1400" height="1400" alt="A player leaning on the goal frame inside a caged pitch, one foot on the ball, wearing a black oversized tee with the TF monogram" loading="lazy">
+          <figcaption>The kit</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="offer" aria-labelledby="offer-h">
+    <div class="wrap">
+      <h2 id="offer-h" class="eyebrow" style="margin-bottom:22px">What's inside</h2>
+      <div class="grid">
+        <div class="cell">
+          <span class="tag">Play</span>
+          <h3>3v3 cage pitches</h3>
+          <p>Boarded perimeter, ball always in play. Four games running at once across two pitches.</p>
+        </div>
+        <div class="cell">
+          <span class="tag">Compete</span>
+          <h3>Futsal courts</h3>
+          <p>Full-size courts for 5-a-side, leagues and one-off bookings, seven days a week.</p>
+        </div>
+        <div class="cell">
+          <span class="tag">Develop</span>
+          <h3>The Academy</h3>
+          <p>Structured coaching for young players with UEFA-qualified staff. Term-time sessions and holiday camps.</p>
+        </div>
+        <div class="cell">
+          <span class="tag">Celebrate</span>
+          <h3>Parties &amp; events</h3>
+          <p>Kids' birthdays in a private hire hall. Corporate days. Food and drink on site.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="signup" id="signup" aria-labelledby="signup-h">
+    <svg class="pattern" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#tfpattern)"/></svg>
+    <div class="wrap">
+      <div class="inner">
+        <span class="eyebrow">Register your interest</span>
+        <h2 id="signup-h">First in<br>the cage</h2>
+        <p class="lede">Leave your details and you'll hear about opening dates, founder memberships and academy places before anyone else.</p>
+
+        <form id="interest-form" novalidate>
+          <div class="row">
+            <div class="field">
+              <label for="f-name">First name</label>
+              <input id="f-name" name="name" type="text" autocomplete="given-name" placeholder="Your name" required>
+            </div>
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required>
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-interest">I'm interested in</label>
+            <select id="f-interest" name="interest">
+              <option value="playing">Playing 3v3 and 5-a-side</option>
+              <option value="academy">The Academy, for my child</option>
+              <option value="parties">Parties and events</option>
+              <option value="corporate">Corporate bookings</option>
+              <option value="everything">All of it</option>
+            </select>
+          </div>
+          <div class="actions">
+            <button class="btn" type="submit" id="f-submit">Keep me posted</button>
+            <p class="fine">One or two emails before we open. Unsubscribe any time.</p>
+          </div>
+          <p class="note" id="f-note" hidden></p>
+        </form>
+
+        <div class="state" id="state-ok" hidden role="status">
+          <h3>You're in.</h3>
+          <p>Thanks <span id="ok-name"></span>. We'll be in touch before the doors open.</p>
+          <p class="note" id="ok-note" hidden>Preview mode: this form isn't connected to a mailing list yet, so nothing was sent.</p>
+        </div>
+        <div class="state err" id="state-err" hidden role="alert">
+          <h3>That didn't go through.</h3>
+          <p>Try again in a moment, or email us directly at <code>hello@totalfootballthecage.co.uk</code>.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <h4>Say hello</h4>
+        <div class="email">
+          <code id="email-text">hello@totalfootballthecage.co.uk</code>
+          <button class="copy-btn" type="button" id="copy-email">Copy</button>
+        </div>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul class="handles">
+          <li><span class="net">Instagram</span><span>@totalfootballthecage</span></li>
+          <li><span class="net">TikTok</span><span>@totalfootballthecage</span></li>
+          <li><span class="net">X</span><span>@tfthecage</span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>The Academy</h4>
+        <ul class="handles">
+          <li><span class="net">All</span><span>@tfcageacademy</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <span><svg class="mark" aria-hidden="true"><use href="#tfmark"/></svg>&copy; 2026 Total Football: The Cage</span>
+      <span>Nottingham, England</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Where sign-ups go. For Web3Forms: leave FORM_ENDPOINT as is and paste your access key into FORM_KEY.
+  // For Formspree or similar: put their form URL in FORM_ENDPOINT and leave FORM_KEY empty.
+  // With both empty the form runs in preview mode and nothing is sent.
+  var FORM_ENDPOINT = "https://api.web3forms.com/submit";
+  var FORM_KEY = "71401310-541e-4728-b3a3-18e253d27b05";
+
+  (function(){
+    var form = document.getElementById('interest-form');
+    var ok = document.getElementById('state-ok');
+    var err = document.getElementById('state-err');
+    var okName = document.getElementById('ok-name');
+    var okNote = document.getElementById('ok-note');
+    var note = document.getElementById('f-note');
+    var submit = document.getElementById('f-submit');
+
+    function valid(){
+      var name = form.name.value.trim();
+      var email = form.email.value.trim();
+      var good = name.length > 0 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+      note.hidden = good;
+      if(!good){ note.textContent = 'Add your first name and a valid email address.'; }
+      return good;
+    }
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      err.hidden = true;
+      if(!valid()) return;
+      var data = {
+        name: form.name.value.trim(),
+        email: form.email.value.trim(),
+        interest: form.interest.value,
+        subject: 'New sign-up: Total Football: The Cage',
+        from_name: 'Holding page',
+        source: 'holding-page'
+      };
+      if(FORM_KEY){ data.access_key = FORM_KEY; }
+      var live = FORM_KEY || (FORM_ENDPOINT && FORM_ENDPOINT.indexOf('web3forms') === -1);
+      submit.disabled = true;
+      submit.textContent = 'Sending';
+
+      function done(preview){
+        okName.textContent = data.name + '.';
+        okNote.hidden = !preview;
+        form.hidden = true;
+        ok.hidden = false;
+        ok.scrollIntoView({behavior:'smooth', block:'center'});
+      }
+      function fail(){
+        submit.disabled = false;
+        submit.textContent = 'Keep me posted';
+        err.hidden = false;
+      }
+
+      if(!live){ setTimeout(function(){ done(true); }, 350); return; }
+
+      fetch(FORM_ENDPOINT, {
+        method:'POST',
+        headers:{'Accept':'application/json','Content-Type':'application/json'},
+        body: JSON.stringify(data)
+      }).then(function(r){ if(r.ok){ done(false); } else { fail(); } })
+        .catch(fail);
+    });
+
+    var copyBtn = document.getElementById('copy-email');
+    var emailText = document.getElementById('email-text');
+    copyBtn.addEventListener('click', function(){
+      var text = emailText.textContent;
+      function flash(msg){ copyBtn.textContent = msg; setTimeout(function(){ copyBtn.textContent = 'Copy'; }, 1600); }
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(function(){ flash('Copied'); }, function(){
+          var range = document.createRange(); range.selectNodeContents(emailText);
+          var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range); flash('Selected');
+        });
+      } else {
+        var range = document.createRange(); range.selectNodeContents(emailText);
+        var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(range); flash('Selected');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
